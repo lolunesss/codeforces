@@ -16,15 +16,15 @@ int main() {
     int r = 0;
     for (int i = 0; i < n + 1; i++) {
       if (prev == '*') {
-	if (s[i] == '#') {
-	  c = 1;
-	}
+        if (s[i] == '#') {
+          c = 1;
+        }
       } else if (prev == '#') {
-	if (s[i] == '#') c++;
-	else {
-	  r = max(r, c);
-	  c = 0;
-	}
+        if (s[i] == '#') c++;
+        else {
+          r = max(r, c);
+          c = 0;
+        }
       }
       prev = s[i];
     }
